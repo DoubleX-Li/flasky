@@ -53,9 +53,6 @@ def send_email(to, subject, template, **kwargs):
         # SMTP服务器设置(地址,端口):
         server = smtplib.SMTP_SSL(app.config['MAIL_SERVER'], app.config['MAIL_PORT'])
         # 连接SMTP服务器(发件人地址, 客户端授权密码)
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-        print(app.config['MAIL_USERNAME'])
-        print(app.config['MAIL_PASSWORD'])
         server.login(app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
 
         # 发送邮件
